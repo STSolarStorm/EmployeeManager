@@ -1,0 +1,5 @@
+extends layout
+
+block content
+    include mixins/employeeForm
+    +employeeForm('/add', employee, jobtitles, stateslist)

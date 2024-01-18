@@ -1,0 +1,5 @@
+extends layout
+
+block content
+    include mixins/employeeForm
+    +employeeForm(`/update/${employee.id}`, employee, jobtitles, stateslist)

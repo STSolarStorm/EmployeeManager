@@ -1,0 +1,56 @@
+mixin employeeForm(url, employee, jobtitles, stateslist)
+
+    form.employee-form(action=url method='post')
+        div.name-row
+            div.first
+                label(for='firstname') First Name:
+                input(id='firstname' name='firstname' type='text' value=employee.firstname)
+            div.last
+                label(for='lastname') Last Name:
+                input(id='lastname' name='lastname' type='text' value=employee.lastname)
+
+        label(for='jobtitle') Job Title:
+        select(id='jobtitle' name='jobtitle')
+            each title in jobtitles
+                option(value=title selected=employee.jobtitle===title) #{title}
+
+        div.address
+            div.streetline
+                div.streetline1
+                    label(for='streetline1') Street Line 1:
+                    input(id='streetline1' name='streetline1' type='text' value=employee.streetline1)
+
+                div.streetline2
+                    label(for='streetline2') Street Line 2:
+                    input(id='streetline2' name='streetline2' type='text' value=employee.streetline2)
+            div.territory
+                div.city
+                    label(for='city') City:
+                    input(id='city' name='city' type='text' value=employee.city)
+
+                div.state
+                    label(for='state') State:
+                    select(id='state' name='state')
+                        each state in stateslist
+                            option(value=state selected=employee.state===state) #{state}
+
+                div.zip
+                    label(for='zip') Zip:
+                    input(id='zip' name='zip' type='number' value=employee.zip)
+
+        div.personal-info-row
+            div.phone
+                label(for='phonenumber') Phone Number:
+                input(id='phonenumber' name='phonenumber' type='number' value=employee.phonenumber)
+
+            div.year
+                label(for='yearhired') Year Hired:
+                input(id='yearhired' name='yearhired' type='number' value=employee.yearhired)
+            div.age
+                label(for='age') Age
+                input(id='age' name='age' type='number' value=employee.age)
+        div.form-buttons
+            a.button.cancel(href='/') Cancel
+            if employee.id
+                a.button.delete(href=`/delete/${employee.id}`) Delete Employee
+            button.button.submit(type='submit') Submit

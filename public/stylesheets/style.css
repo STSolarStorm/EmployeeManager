@@ -1,0 +1,166 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #435f5f
+}
+
+a {
+  color: #00B7FF;
+}
+
+td {
+  padding: 16px;
+}
+
+td {
+  vertical-align: top;
+  border-bottom: 1px solid #CCC;
+  border-collapse: collapse;
+  color: #4B5563
+}
+
+table {
+  border-radius: 8px;
+  background-color: white;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td:first-child, th:first-child {
+  border-left: 1px solid #CCC;
+}
+
+th {
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  background-color: #E5E7EB;
+  color: #374151;
+  padding: 8px 16px;
+}
+
+thead {
+  background-color: #E5E7EB;
+}
+
+tr:nth-child(2n) td{
+  background-color: #E5E7EB;
+  color: #1F2937;
+}
+
+.tabletitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.tabletitle a{
+  display: block;
+  background-color: #0468a1;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions a {
+  text-decoration: none;
+  font-weight: bold;
+  color:#115E59;
+}
+
+.form-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+  text-decoration: none;
+  font-weight: bold;
+  color: #115E59;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+}
+
+.button.submit {
+  background-color: #115E59;
+  color: white;
+}
+
+.button.delete {
+  color:#B91C1C;
+  background-color: #FEE2E2
+}
+
+.button.cancel {
+  color: #1E293B;
+}
+
+.employee-form {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 750px;
+}
+
+.employee-form label{
+  display: block;
+  font-weight: bold;
+  color: #71717A
+}
+
+.employee-form input {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #CCC;
+  box-shadow: none;
+  margin-bottom: 8px;
+}
+
+.streetline {
+  display: flex;
+  gap: 16px;
+}
+
+.streetline1 {
+  flex: 3;
+  margin-right: 16px;
+}
+
+.streetline1 input{
+  width: 100%;
+}
+
+.streetline2 {
+  flex: 1;
+}
+
+.territory {
+  display: flex;
+}
+
+.city, .state {
+  margin-right: 16px;
+}
+
+.name-row {
+  display: flex;
+}
+
+.first {
+  margin-right: 16px;
+}
